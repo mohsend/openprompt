@@ -32,6 +32,10 @@ html, body {
   transform: translateZ(0);
 }
 
+.rtl {
+	direction: rtl;
+}
+
 .prompter.mirror {
   padding-left: 110px;
   padding-right: 50px;

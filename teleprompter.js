@@ -61,13 +61,13 @@ function updateSpeed() {
 }
 
 
-function pageScroll() { 
+function pageScroll() {
   var direction;
   if ( speed < 0 ) {
     direction = -1;
   } else if ( speed > 0 ) {
     direction = 1;
-  }  
+  }
   window.scrollBy(0, direction);
   if ( $(document).scrollTop() === 0 && speed < 0) {
     speed = 0;
@@ -79,7 +79,7 @@ function pageScroll() {
   };
   if (isPlaying) {
     scrolldelay = setTimeout('pageScroll()', baseTime / Math.abs(speed/sensitivity));
-  } 
+  }
 }
 
 
@@ -113,7 +113,7 @@ $(document).on('keydown',null,'up', function(e) {
   play();
 });
 
-// shift+up arrow : scroll up a bunch 
+// shift+up arrow : scroll up a bunch
 $(document).on('keydown',null,'shift+up', function(e) {
   window.scrollBy(0, - pageJump);
 });
@@ -129,7 +129,7 @@ $(document).on('keydown',null,'shift+down', function(e) {
   window.scrollBy(0, pageJump);
 });
 
-// left arrow: jump to top 
+// left arrow: jump to top
 $(document).on('keydown',null,'left', function(e) {
   $(window).scrollTop(0);
     if (speed < 0) {
@@ -151,10 +151,15 @@ $(document).on('keydown',null,'shift+=', function(e) {
 $(document).on('keydown',null,'shift+-', function(e) {
   setFontSize('-=5');
 });
- 
-// reset font size to 
+
+// reset font size to
 $(document).on('keydown',null,'shift+0', function(e) {
   setFontSize(baseFontSize);
+});
+
+// toggles right-to-left/left-to-right direction.
+$(document).on('keydown',null,'shift+d', function(e) {
+  $('#prompter').toggleClass('rtl');
 });
 
 // toggle page flip when clicking the flip button
@@ -165,7 +170,7 @@ $flipButton.click( function(evt) {
 });
 
 /* toggle full screen when clicking the page
-   but only if you're not editing and the 
+   but only if you're not editing and the
    teleprompter isn't playing
 */
 $('body').click(function() {
@@ -179,7 +184,7 @@ $('body').click(function() {
 */
 $arrow.draggable({ axis: "y" });
 
-// prompter properties 
+// prompter properties
 function setFontSize( amt ) {
   $prompter.css('font-size', amt);
 }
