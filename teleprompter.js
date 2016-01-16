@@ -159,9 +159,7 @@ $(document).on('keydown',null,'shift+0', function(e) {
 
 // toggles right-to-left/left-to-right direction.
 $(document).on('keydown',null,'shift+d', function(e) {
-  $('#prompter').toggleClass('rtl');
-  $('.toolbar').toggleClass('rtl');
-  $('.edit').toggleClass('rtl');
+  ($prompter).add($toolbar).add($editButton).toggleClass('rtl');
 });
 
 // toggle page flip when clicking the flip button
@@ -177,7 +175,7 @@ $flipButton.click( function(evt) {
 */
 $('body').click(function() {
   if ( ! isBeingEdited && ! isPlaying) {
-    toggleFullScreen();
+   toggleFullScreen();
   }
 });
 
