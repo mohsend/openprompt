@@ -19,7 +19,7 @@ var baseTime = 40;
 var pageJump = 600;
 var sensitivity = 1.5;
 
-
+// Functions
 function stop() {
   savedSpeed = speed;
   speed = 0;
@@ -82,6 +82,12 @@ function pageScroll() {
   }
 }
 
+
+function toggleMirror(evt) {
+  $(this).add($prompter).add($toolbar).add($editButton).toggleClass('mirror');
+  isFlipped = ! isFlipped;
+  evt.stopPropagation();
+}
 
 
 /* bind keyboard events */
@@ -152,7 +158,7 @@ $(document).on('keydown',null,'shift+-', function(e) {
   setFontSize('-=5');
 });
 
-// reset font size to
+// reset font size to default
 $(document).on('keydown',null,'shift+0', function(e) {
   setFontSize(baseFontSize);
 });
@@ -162,11 +168,14 @@ $(document).on('keydown',null,'shift+d', function(e) {
   ($prompter).add($toolbar).add($editButton).toggleClass('rtl');
 });
 
-// toggle page flip when clicking the flip button
-$flipButton.click( function(evt) {
-  $(this).add($prompter).add($toolbar).add($editButton).toggleClass('mirror');
-  isFlipped = ! isFlipped;
-  evt.stopPropagation();
+// toggle page flip (Mirror)
+$(document).on('keydown',null,'shift+b', function(e) {
+  toggleMirror(e);
+});
+
+// toggle page flip (Mirror) when clicking the flip button
+$flipButton.click(function(e) {
+	toggleMirror(e);
 });
 
 /* toggle full screen when clicking the page

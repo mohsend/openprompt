@@ -29,6 +29,7 @@ To save the prompt for later use, while in **Edit** mode simply hit `ctrl + s` (
 - **Shift + =**: increase font size
 - **Shift + -**: decrease font size
 - **Shift + 0**: reset font size to default
+- **Shift + B**: Flips page for reading from a mirror reflection.
 - **Shift + D**: toggles right-to-left/left-to-right direction.
 
 
