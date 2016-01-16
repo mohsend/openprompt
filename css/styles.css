@@ -45,9 +45,6 @@ html, body {
   transform: translateZ(0);
 }
 
-.rtl {
-	direction: rtl;
-}
 
 .prompter.mirror {
   padding-left: 110px;
@@ -135,4 +132,26 @@ html, body {
 
 .running {
   background-color: green;
+}
+
+
+/* rtl classes */
+
+.rtl {
+	direction: rtl;
+}
+
+.prompter.rtl {
+  font-family: IRRoya, B Roya, Liberation Serif, Arial;
+  padding: 2.25em 110px 0 50px;
+}
+
+.toolbar.rtl, .toolbar.rtl div {
+  right: 0;
+  left: auto;
+}
+
+.edit.rtl {
+  right: auto;
+  left: 0;
 }
