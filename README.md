@@ -7,30 +7,30 @@ Open `index.html` in your browser (locally or from a host), enter **Edit** mode,
 
 To save the prompt for later use, while in **Edit** mode simply save the webpage (by hitting ` ctrl + s ` on PC or ` cmd + s ` on a mac). The saved page (along with the accompanying directory) can act as a standalone prompter.
 
-You can find the webapp hosted [here](http://www.sawmac.com/openprompt/) and [here](http://mohsend.github.io/openprompt).
+You can find the webapp hosted [here](http://mehsen.com/openprompt).
 
 ### Interacting
 
 #### Mouse
 
-- **Right click** on page: toggle full screen if you're not editing and the teleprompter isn't rolling.
-- **B** on top-left corner: Flips page for reading from a mirror reflection.
-- **Edit** on top-right corner: Enables editing.
+- **Left click** on page: Toggle full screen if you're not editing and the teleprompter isn't rolling.
+- **B** (top-left corner): Flip page ---for reading from a mirror reflection.
+- **Edit** (top-right corner): Enable editing.
 
 #### Keyboard
 
-- **Space key**: start and stop rolling
-- **Up arrow**: slow down (reverse after 0)
-- **Down arrow**: speed up
-- **Shift + Up**: scroll up a page
-- **Shift + Down**: scroll down a page
-- **Left arrow**: jump to top
-- **Right arrow**: jump to bottom
-- **Shift + =**: increase font size
-- **Shift + -**: decrease font size
-- **Shift + 0**: reset font size to default
-- **Shift + B**: Flips page for reading from a mirror reflection.
-- **Shift + D**: toggles right-to-left/left-to-right direction.
+- **Space key**: Start/stop rolling
+- **Up arrow**: Slow down (reverse after 0)
+- **Down arrow**: Speed up
+- **Shift + Up**: Scroll up one page
+- **Shift + Down**: Scroll down one page
+- **Left arrow**: Jump to top
+- **Right arrow**: Jump to bottom
+- **Shift + =**: Increase font size
+- **Shift + -**: Decrease font size
+- **Shift + 0**: Reset font size to default
+- **Shift + B**: Flip page ---for reading from a mirror reflection.
+- **Shift + D**: Toggle right-to-left/left-to-right direction.
 
 
 ## License
