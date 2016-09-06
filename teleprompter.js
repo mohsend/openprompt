@@ -3,6 +3,7 @@ var $prompter = $('.prompter');
 var $arrow = $('.arrow');
 var $flipButton = $('.flip');
 var $editButton = $('.edit');
+var $helpButton = $('.help');
 var $toolbar = $('.toolbar');
 var $speedIndicator = $('.speed');
 
@@ -84,7 +85,7 @@ function pageScroll() {
 
 
 function toggleMirror(evt) {
-  $(this).add($prompter).add($toolbar).add($editButton).toggleClass('mirror');
+  $(this).add($prompter).add($toolbar).add($editButton).add($helpButton).toggleClass('mirror');
   isFlipped = ! isFlipped;
   evt.stopPropagation();
 }
@@ -165,7 +166,7 @@ $(document).on('keydown',null,'shift+0', function(e) {
 
 // toggles right-to-left/left-to-right direction.
 $(document).on('keydown',null,'shift+d', function(e) {
-  ($prompter).add($toolbar).add($editButton).toggleClass('rtl');
+  ($prompter).add($toolbar).add($editButton).add($helpButton).toggleClass('rtl');
 });
 
 // toggle page flip (Mirror)
@@ -216,4 +217,11 @@ $editButton.click(function (evt) {
     $('body').removeClass('editing');
     $(this).text('Edit');
   }
+});
+
+// Toggle help
+$helpButton.click(function (evt) {
+  stop();
+  evt.stopPropagation();
+  $('#helpContent').toggleClass('hidden');
 });

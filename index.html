@@ -7,6 +7,48 @@
   <link rel="stylesheet" href="css/jquery-ui.css">
 </head>
 <body>
+  <div id="helpContent" class="overlay hidden">
+    <h1 id="openprompt">Openprompt</h1>
+    <p>A simple Teleprompt web app.</p>
+
+    <h2 id="how-to-use">How to use</h2>
+
+    <p>Open <code>index.html</code> in your browser (locally or from a host), enter <strong>Edit</strong> mode, paste the text you want to prompt, click on <strong>Done</strong> and start using it.</p>
+
+    <p>To save the prompt for later use, while in <strong>Edit</strong> mode simply save the webpage (by hitting ` ctrl + s ` on PC or ` cmd + s ` on a mac). The saved page (along with the accompanying directory) can act as a standalone prompter.</p>
+
+    <p>You can find the webapp hosted <a href="http://mehsen.com/openprompt">here</a>, and the source code <a href="https://github.com/mohsend/openprompt">here on github</a>.</p>
+
+    <h3 id="interacting">Interacting</h3>
+
+    <div style="width: 49%; float: left;">
+      <h4 id="mouse">Mouse</h4>
+
+      <ul>
+        <li><strong>Left click</strong> on page: Toggle full screen if you’re not editing and the teleprompter isn’t rolling.</li>
+        <li><strong>B</strong> (top-left corner): Flip page —for reading from a mirror reflection.</li>
+        <li><strong>Edit</strong> (top-right corner): Enable editing.</li>
+      </ul>
+    </div>
+    
+    <div style="width: 49%; float: right;">
+      <h4 id="keyboard">Keyboard</h4>
+      <ul>
+        <li><strong>Space key</strong>: Start/stop rolling</li>
+        <li><strong>Up arrow</strong>: Slow down (reverse after 0)</li>
+        <li><strong>Down arrow</strong>: Speed up</li>
+        <li><strong>Shift + Up</strong>: Scroll up one page</li>
+        <li><strong>Shift + Down</strong>: Scroll down one page</li>
+        <li><strong>Left arrow</strong>: Jump to top</li>
+        <li><strong>Right arrow</strong>: Jump to bottom</li>
+        <li><strong>Shift + =</strong>: Increase font size</li>
+        <li><strong>Shift + -</strong>: Decrease font size</li>
+        <li><strong>Shift + 0</strong>: Reset font size to default</li>
+        <li><strong>Shift + B</strong>: Flip page —for reading from a mirror reflection.</li>
+        <li><strong>Shift + D</strong>: Toggle right-to-left/left-to-right direction.</li>
+      </ul>
+    </div>
+  </div>
   <article class="prompter" id="prompter">
     <p>Before we get started programming, I want to talk about what I'll cover in this course.
     </p>
@@ -27,6 +69,7 @@
     <div class="arrow">➤</div>
   </div>
   <div class="edit">Edit</div>
+  <div class="help">Help</div>
   <script src="libs/jquery-2.1.1.min.js"></script>
   <script src="libs/jquery-ui.min.js"></script>
   <script src="libs/jquery.hotkeys.js"></script>
