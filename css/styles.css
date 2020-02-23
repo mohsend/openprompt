@@ -1,5 +1,6 @@
-html, body {
-  background-color : black;
+html,
+body {
+  background-color: black;
 }
 
 .editing {
@@ -19,7 +20,7 @@ html, body {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 110px;
+  width: 100px;
 }
 
 .editing .toolbar {
@@ -33,10 +34,6 @@ html, body {
   margin-top: -.25em;
   padding: 2.25em 50px 0 110px;
   margin-bottom: 12em;
-  -moz-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
 
@@ -46,10 +43,6 @@ html, body {
   font-family: Helvetica;
   margin-top: -.25em;
   padding: 2.25em 50px 0 110px;
-  -moz-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
 
@@ -64,10 +57,6 @@ html, body {
 
 .mirror {
   display: block;
-  -moz-transform: scale(-1, 1) translateZ(0);
-  -webkit-transform: scale(-1, 1) translateZ(0);
-  -o-transform: scale(-1, 1) translateZ(0);
-  -ms-transform: scale(-1, 1) translateZ(0);
   transform: scale(-1, 1) translateZ(0);
 }
 
@@ -83,7 +72,10 @@ html, body {
   cursor: pointer;
 }
 
-.speed, .flip, .edit, .help {
+.speed,
+.flip,
+.edit,
+.help {
   box-sizing: border-box;
   padding-top: 10px;
   width: 50px;
@@ -106,7 +98,7 @@ html, body {
   padding-right: 25px;
   width: 100px;
   position: fixed;
-  display : block;
+  display: block;
   cursor: pointer;
 }
 
@@ -114,11 +106,7 @@ html, body {
   display: none;
 }
 
-.edit .mirror {
-  right: inherit;
-  left: 0;
-}
-
+.edit .mirror,
 .help .mirror {
   right: inherit;
   left: 0;
@@ -133,7 +121,7 @@ html, body {
   padding-bottom: 25px;
   width: 100px;
   position: fixed;
-  display : block;
+  display: block;
   cursor: pointer;
 }
 
@@ -164,8 +152,8 @@ html, body {
 }
 
 .toolbar-right.mirror {
-  left: 0;
   right: inherit;
+  left: 0;
 }
 
 .running {
@@ -184,61 +172,53 @@ html, body {
   padding: 2.25em 110px 0 50px;
 }
 
-.toolbar.rtl, .toolbar.rtl div {
+.toolbar.rtl,
+.toolbar.rtl div {
   right: 0;
   left: auto;
 }
 
-.edit.rtl {
-  right: auto;
-  left: 0;
-}
-
+.edit.rtl,
 .help.rtl {
   right: auto;
   left: 0;
 }
 
 .toolbar.rtl.mirror {
-  left: 0;
   right: inherit;
+  left: 0;
 }
 
-.edit.rtl.mirror {
-  left: inherit;
+.edit.rtl.mirror,
+.help.rtl.mirror,
+.toolbar-right.rtl.mirror {
   right: 0;
-}
-
-.help.rtl.mirror {
   left: inherit;
-  right: 0;
 }
 
 .toolbar.rtl div:last-child {
-  display :block;
-  -moz-transform: scale(-1, 1) translateZ(0);
-  -webkit-transform: scale(-1, 1) translateZ(0);
-  -o-transform: scale(-1, 1) translateZ(0);
-  -ms-transform: scale(-1, 1) translateZ(0);
+  display: block;
   transform: scale(-1, 1) translateZ(0);
 }
 
-.overlay {   
-    z-index: 1;
-    width: 80%;
-    height: 80%;
-    margin: 10%;
-    position: fixed;
-    background-color: rgb(200,200,200);
-    background-color: rgba(200,200,200, 0.9);
-    color: #000000;
-    font-size: 1.5rem;
-    overflow-x: hidden;
-    transition: 0.5s;
+.overlay {
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  position: fixed;
+  background-color: rgb(200, 200, 200);
+  background-color: rgba(200, 200, 200, 0.9);
+  color: #000000;
+  font-size: 1.5rem;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
-.overlay p, .overlay h1, .overlay h2, .overlay h3, .overlay h4 {
+.overlay p,
+.overlay h1,
+.overlay h2,
+.overlay h3,
+.overlay h4 {
   margin: 1rem;
 }
-
-
