@@ -14,6 +14,14 @@ html, body {
   width: 110px;
 }
 
+.toolbar-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 110px;
+}
+
 .editing .toolbar {
   display: none;
 }
@@ -155,6 +163,11 @@ html, body {
   left: inherit;
 }
 
+.toolbar-right.mirror {
+  left: 0;
+  right: inherit;
+}
+
 .running {
   background-color: green;
 }
@@ -177,6 +190,11 @@ html, body {
 }
 
 .edit.rtl {
+  right: auto;
+  left: 0;
+}
+
+.help.rtl {
   right: auto;
   left: 0;
 }

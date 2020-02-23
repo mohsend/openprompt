@@ -5,6 +5,7 @@ var $flipButton = $('.flip');
 var $editButton = $('.edit');
 var $helpButton = $('.help');
 var $toolbar = $('.toolbar');
+var $toolbar_right = $('.toolbar-right');
 var $speedIndicator = $('.speed');
 
 // teleprompter properties
@@ -85,7 +86,7 @@ function pageScroll() {
 
 
 function toggleMirror(evt) {
-  $(this).add($prompter).add($toolbar).add($editButton).add($helpButton).toggleClass('mirror');
+  $(this).add($prompter).add($toolbar).add($toolbar_right).add($editButton).add($helpButton).toggleClass('mirror');
   isFlipped = ! isFlipped;
   evt.stopPropagation();
 }
@@ -166,7 +167,7 @@ $(document).on('keydown',null,'shift+0', function(e) {
 
 // toggles right-to-left/left-to-right direction.
 $(document).on('keydown',null,'shift+d', function(e) {
-  ($prompter).add($toolbar).add($editButton).add($helpButton).toggleClass('rtl');
+  ($prompter).add($toolbar).add($toolbar_right).add($editButton).add($helpButton).toggleClass('rtl');
 });
 
 // toggle page flip (Mirror)

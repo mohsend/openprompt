@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Teleprompter</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
 </head>
+
 <body>
   <div id="helpContent" class="overlay hidden">
     <h1 id="openprompt">Openprompt</h1>
@@ -13,11 +15,15 @@
 
     <h2 id="how-to-use">How to use</h2>
 
-    <p>Open <code>index.html</code> in your browser (locally or from a host), enter <strong>Edit</strong> mode, paste the text you want to prompt, click on <strong>Done</strong> and start using it.</p>
+    <p>Open <code>index.html</code> in your browser (locally or from a host), enter <strong>Edit</strong> mode, paste
+      the text you want to prompt, click on <strong>Done</strong> and start using it.</p>
 
-    <p>To save the prompt for later use, while in <strong>Edit</strong> mode simply save the webpage (by hitting ` ctrl + s ` on PC or ` cmd + s ` on a mac). The saved page (along with the accompanying directory) can act as a standalone prompter.</p>
+    <p>To save the prompt for later use, while in <strong>Edit</strong> mode simply save the webpage (by hitting ` ctrl
+      + s ` on PC or ` cmd + s ` on a mac). The saved page (along with the accompanying directory) can act as a
+      standalone prompter.</p>
 
-    <p>You can find the webapp hosted <a href="http://mehsen.com/openprompt">here</a>, and the source code <a href="https://github.com/mohsend/openprompt">here on github</a>.</p>
+    <p>You can find the webapp hosted <a href="http://mehsen.com/openprompt">here</a>, and the source code <a
+        href="https://github.com/mohsend/openprompt">here on github</a>.</p>
 
     <h3 id="interacting">Interacting</h3>
 
@@ -25,12 +31,13 @@
       <h4 id="mouse">Mouse</h4>
 
       <ul>
-        <li><strong>Left click</strong> on page: Toggle full screen if you’re not editing and the teleprompter isn’t rolling.</li>
+        <li><strong>Left click</strong> on page: Toggle full screen if you’re not editing and the teleprompter isn’t
+          rolling.</li>
         <li><strong>B</strong> (top-left corner): Flip page —for reading from a mirror reflection.</li>
         <li><strong>Edit</strong> (top-right corner): Enable editing.</li>
       </ul>
     </div>
-    
+
     <div style="width: 49%; float: right;">
       <h4 id="keyboard">Keyboard</h4>
       <ul>
@@ -52,15 +59,32 @@
   <article class="prompter" id="prompter">
     <p>Before we get started programming, I want to talk about what I'll cover in this course.
     </p>
-    <p>JavaScript is a programming "language" and like any language it has its own vocabulary and grammar -- programmers call this [motion]"syntax"[/motion]. A programming language's syntax is the different commands, special words, and punctuation you use to put together a program. Every programming language has its own syntax -- just as English, Spanish, and Mandarin each have their own vocabulary and grammar. Writing a program is like writing a story using the vocabulary and grammar of the programming language.
+    <p>JavaScript is a programming "language" and like any language it has its own vocabulary and grammar -- programmers
+      call this [motion]"syntax"[/motion]. A programming language's syntax is the different commands, special words, and
+      punctuation you use to put together a program. Every programming language has its own syntax -- just as English,
+      Spanish, and Mandarin each have their own vocabulary and grammar. Writing a program is like writing a story using
+      the vocabulary and grammar of the programming language.
     </p>
-    <p>I'll also teach you programming concepts. These concepts won't just apply to JavaScript -- they're common ideas you'll find in many programming languages. Things like variables, strings, conditional statements and functions. In other words, I'll teach you basic programming concepts that you can apply to other programming languages like PHP, Ruby, Java or Python.
+    <p>I'll also teach you programming concepts. These concepts won't just apply to JavaScript -- they're common ideas
+      you'll find in many programming languages. Things like variables, strings, conditional statements and functions.
+      In other words, I'll teach you basic programming concepts that you can apply to other programming languages like
+      PHP, Ruby, Java or Python.
     </p>
-    <p>As a programmer, it's also important to be able to talk like a programmer, so I'll introduce important vocabulary that's useful for you to know. These are programming terms that will come up often as you read, talk and learn about JavaScript and programming. For example, now you know what the word "syntax" means (if you forgot it's a programming language's vocabulary and grammar)
+    <p>As a programmer, it's also important to be able to talk like a programmer, so I'll introduce important vocabulary
+      that's useful for you to know. These are programming terms that will come up often as you read, talk and learn
+      about JavaScript and programming. For example, now you know what the word "syntax" means (if you forgot it's a
+      programming language's vocabulary and grammar)
     </p>
-    <p>Lastly, you'll learn important programming techniques -- these are "best practices", or proven ways to put together programs so they work better. For example, you'll learn how to use comments to make your programs easier to understand and use.
+    <p>Lastly, you'll learn important programming techniques -- these are "best practices", or proven ways to put
+      together programs so they work better. For example, you'll learn how to use comments to make your programs easier
+      to understand and use.
     </p>
-    <p>Of course, you'll also do a lot of programming -- in fact in the next video, you'll dive right in and create your first JavaScript program. But before that, I want to leave you with one important point to remember: [motion]JavaScript is NOT Java[/motion].  This is something that confuses a lot of people. Despite “Java” appearing in both names, they’re unrelated programming languages -- the confusion is all thanks to some non-technical business and marketing decisions made in the early days of the web. But don’t you make this mistake. Just remember that JavaScript is not Java -- knowing this might just save you a lot of embarrassment in a job interview someday.
+    <p>Of course, you'll also do a lot of programming -- in fact in the next video, you'll dive right in and create your
+      first JavaScript program. But before that, I want to leave you with one important point to remember:
+      [motion]JavaScript is NOT Java[/motion]. This is something that confuses a lot of people. Despite “Java” appearing
+      in both names, they’re unrelated programming languages -- the confusion is all thanks to some non-technical
+      business and marketing decisions made in the early days of the web. But don’t you make this mistake. Just remember
+      that JavaScript is not Java -- knowing this might just save you a lot of embarrassment in a job interview someday.
     </p>
   </article>
   <div class="toolbar">
@@ -68,12 +92,15 @@
     <div class="speed">0</div>
     <div class="arrow">➤</div>
   </div>
-  <div class="edit">Edit</div>
-  <div class="help">Help</div>
+  <div class="toolbar-right">
+    <div class="edit">Edit</div>
+    <div class="help">Help</div>
+  </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="libs/jquery.hotkeys.js"></script>
   <script src="libs/helpers.js"></script>
   <script src="teleprompter.js"></script>
 </body>
+
 </html>
